@@ -19,7 +19,6 @@ public class ReportePolicia extends Reporte {
     }
 
     public void establecerPromedioEdades() {
-//        this.promedioEdades = promedioEdades;
         double suma = 0;
         for (int i = 0; i < lista.size(); i++) {
             suma = promedioEdades
@@ -39,6 +38,37 @@ public class ReportePolicia extends Reporte {
 
     public ArrayList<Policia> obtenerLista() {
         return lista;
+    }
+    
+        
+        @Override
+    public String toString() {
+        String cadena = "Reporte Policias";
+
+        cadena = String.format(""
+                + "%s\n"
+                + "CODIGO %s\n",
+                cadena,
+                codigo);
+
+        for (int i = 0; i < lista.size(); i++) {
+            Policia d = lista.get(i);
+            cadena = String.format(""
+                    + "%s\n"
+                    + "Nombre: %s\n"
+                    + "Edad: %d\n",
+                    cadena,
+                    d.getNombre(),
+                    d.getEdad()
+            );
+
+        }
+        cadena = String.format(""
+                + "%s\n"
+                + "El promedio de Edades es: %.0f\n",
+                cadena, promedioEdades);
+
+        return cadena;
     }
 
 }

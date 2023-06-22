@@ -41,14 +41,14 @@ public class Principal {
         rd.establecerPromedioSueldos();
 
         ReporteEstudiante re = new ReporteEstudiante(listaEstudiantes, "0001Est");
-//        re.establecerPromedioMatriculas();
-//        ReportePolicia rp = new ReportePolicia("0001Pol");
+        re.establecerPromedioMatriculas();
+        ReportePolicia rp = new ReportePolicia( listaPolicias,"0001Pol");
+        rp.establecerPromedioEdades();
 
         System.out.println(rd);
         System.out.println("-------------------------------");
         System.out.println(re);
         System.out.println("-------------------------------");
-
-//        System.out.println(rp);
+        System.out.println(rp);
     }
 }

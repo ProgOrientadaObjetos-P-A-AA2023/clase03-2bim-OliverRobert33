@@ -37,35 +37,5 @@ public class ReporteEstudiante extends Reporte {
     public ArrayList<Estudiante> obtenerLista() {
         return lista;
     }
-    
-        @Override
-    public String toString() {
-        String cadena = "Reporte Estudiante";
-
-        cadena = String.format(""
-                + "%s\n"
-                + "CODIGO %s\n",
-                cadena,
-                codigo);
-
-        for (int i = 0; i < lista.size(); i++) {
-            Estudiante d = lista.get(i);
-            cadena = String.format(""
-                    + "%s\n"
-                    + "Nombre: %s\n"
-                    + "Matricula: %.2f\n",
-                    cadena,
-                    d.getNombre(),
-                    d.getMatricula()
-            );
-
-        }
-        cadena = String.format(""
-                + "%s\n"
-                + "El promedio de sueldos es: %.3f\n",
-                cadena, promedioMatriculas);
-
-        return cadena;
-    }
 
 }
